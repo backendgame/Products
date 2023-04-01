@@ -11,9 +11,12 @@
 }
 
 body {
-    background: beige;
     margin: 0;
     padding: 0;
+}
+
+.hero-image {
+    background-color: #F2C57C;
 }
 
 .navbar {
@@ -22,9 +25,21 @@ body {
     align-items: center;
     background: white;
     height: 79px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar.shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar ul {
+    display: flex;
+    align-items: center;
     list-style-type: none;
 }
 
@@ -77,7 +92,6 @@ body {
 
 .start-trial:hover {
     cursor: pointer;
-    opacity: 0.6;
 }
 
 .divider {
@@ -131,3 +145,32 @@ body {
 .navbar li:hover {
     cursor: pointer;
 }
+
+/* Login button */
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #444;
+}
+
+/* Card pricing */
+.card-pricing {
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* .card-pricing:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+} */
